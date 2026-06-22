@@ -14,12 +14,12 @@ def kaprekar_routine(n):
     # Perform the Kaprekar routine
     result = largest - smallest
     
-    return result
+    return result, largest, smallest
 
 # Example usage:
 number = int(input("Enter a non-negative integer (0 to 9999): "))
 while number != 6174:
-    result = kaprekar_routine(number)
+    result, largest, smallest = kaprekar_routine(number)
     print(f"{largest} - {smallest} = {result}")
     number = result
 print("Congratulations! You've reached 6174, the Kaprekar's constant.")
